@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-body: 'Inter', sans-serif;
+}
+
+body {
+  background-image: url(./images/Fundo.jpg);
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #121214;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  margin-top: 3.2rem;
+}
+
+header img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+header div {
+  width: 12rem;
+  background-image: linear-gradient(
+    90deg,
+    #9572fc 0%,
+    #43e7ad 50.52%,
+    #e2d45c 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  padding: 0.4rem;
+
+  margin: auto;
+  transition: 300ms;
+
+  animation: fromTop 800ms;
+}
+
+header div:hover {
+  transform: scale(1.15);
+}
+
+main {
+  max-width: 58rem;
+  width: 90%;
+
+  display: grid;
+  gap: 2.4rem;
+
+  margin: 3.2rem auto 4.4rem;
+}
+
+section {
+  background-image: linear-gradient(
+    90deg,
+    #9572fc 0%,
+    #43e7ad 50.52%,
+    #e2d45c 100%
+  );
+  padding-top: 0.4rem;
+  border-radius: 12px;
+
+  animation: fromLeft 800ms backwards;
+}
+
+section:nth-child(1) {
+  animation-delay: 0;
+}
+
+section:nth-child(2) {
+  animation-delay: 400ms;
+}
+
+section:nth-child(3) {
+  animation-delay: 800ms;
+}
+
+section div {
+  background-color: #2a2634;
+  padding: 3.2rem;
+  padding-top: 2.4rem;
+
+  border-radius: 8px;
+
+  animation: fromLeft 800ms;
+}
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 3.8rem;
+  font-weight: 900;
+
+  color: #fff;
+  letter-spacing: -0.047rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+
+  color: #a1a1aa;
+  letter-spacing: -0.018rem;
+}
+
+ul {
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+
+  margin-top: 2.4rem;
+}
+
+ul li {
+  transition: 300ms;
+}
+
+ul li:hover {
+  transform: scale(1.15);
+}
+
+.games-list img {
+  width: 9rem;
+  border-radius: 8px;
+}
+
+.streamers-list img {
+  width: 6rem;
+  border-radius: 999px;
+
+  border: 1px solid #443e54;
+}
+
+/* ------- Animation ------- */
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-65px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-65px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
